@@ -1,0 +1,24 @@
+{
+    "name": "alanvdb/client",
+    "description": "Basic HTTP client that automatically handles SSL certificate retrieval",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^11.3"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "AlanVdb\\HttpClient\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "alanvdb",
+            "email": "alanvdb.coder@gmail.com"
+        }
+    ],
+    "require": {
+        "psr/http-client": "^1.0",
+        "guzzlehttp/guzzle": "^7.9"
+    }
+}

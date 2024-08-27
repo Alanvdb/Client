@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/11.2/phpunit.xsd" bootstrap="vendor/autoload.php" colors="true" stopOnFailure="false" cacheDirectory=".phpunit.cache">
+  <coverage>
+    <report>
+      <html outputDirectory="coverage"/>
+    </report>
+  </coverage>
+  <testsuites>
+    <testsuite name="Application Test Suite">
+      <directory>tests</directory>
+    </testsuite>
+  </testsuites>
+  <logging>
+    <junit outputFile="logs/junit.xml"/>
+    <teamcity outputFile="logs/teamcity.log"/>
+  </logging>
+  <php>
+    <ini name="error_reporting" value="-1"/>
+    <ini name="display_errors" value="1"/>
+    <ini name="display_startup_errors" value="1"/>
+    <ini name="xdebug.show_error_trace" value="1"/>
+    <env name="PHPUNIT_WARN_DEPRECATED" value="1"/>
+  </php>
+  <source>
+    <include>
+      <directory suffix=".php">src</directory>
+    </include>
+    <exclude>
+      <directory suffix=".php">tests</directory>
+    </exclude>
+  </source>
+</phpunit>
